@@ -63,6 +63,7 @@ namespace TreeView
 
         private void button2_Click(object sender, EventArgs e)
         {
+            treeView1.SelectedNode.Name = EditSelectedNodeTxtBox.Text;
             treeView1.SelectedNode.Text = EditSelectedNodeTxtBox.Text;
         }
     }

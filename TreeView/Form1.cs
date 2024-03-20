@@ -49,5 +49,10 @@ namespace TreeView
                 treeView1.SelectedNode.Nodes.Add(treeNode);
             }
         }
+
+        private void RemoveNodeBtn_Click(object sender, EventArgs e)
+        {
+            treeView1.SelectedNode.Remove();
+        }
     }
 }

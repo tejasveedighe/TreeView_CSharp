@@ -39,6 +39,9 @@
             ChildNodeTxtBox = new TextBox();
             label2 = new Label();
             AddChildNodeBtn = new Button();
+            RemoveNodeBtn = new Button();
+            label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
@@ -113,11 +116,43 @@
             AddChildNodeBtn.UseVisualStyleBackColor = true;
             AddChildNodeBtn.Click += AddChildNodeBtn_Click;
             // 
+            // RemoveNodeBtn
+            // 
+            RemoveNodeBtn.Location = new Point(60, 258);
+            RemoveNodeBtn.Name = "RemoveNodeBtn";
+            RemoveNodeBtn.Size = new Size(106, 23);
+            RemoveNodeBtn.TabIndex = 7;
+            RemoveNodeBtn.Text = "Remove Node";
+            RemoveNodeBtn.UseVisualStyleBackColor = true;
+            RemoveNodeBtn.Click += RemoveNodeBtn_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(118, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(218, 30);
+            label3.TabIndex = 8;
+            label3.Text = "Welcome to Tree View";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(13, 63);
+            label4.Name = "label4";
+            label4.Size = new Size(56, 15);
+            label4.TabIndex = 9;
+            label4.Text = "Tree View";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(517, 450);
+            ClientSize = new Size(466, 294);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(RemoveNodeBtn);
             Controls.Add(AddChildNodeBtn);
             Controls.Add(label2);
             Controls.Add(ChildNodeTxtBox);
@@ -143,5 +178,8 @@
         private Button AddChildNodeBtn;
         private Label label2;
         private TextBox ChildNodeTxtBox;
+        private Button RemoveNodeBtn;
+        private Label label3;
+        private Label label4;
     }
 }

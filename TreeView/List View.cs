@@ -38,7 +38,7 @@ namespace Views
 
             foreach (var person in people)
             {
-                var row = new string[] { person.FirstName, person.LastName, person.DOB.ToShortDateString() };
+                var row = new string[] { person.FirstName, person.LastName, person.DOB.ToString("dd/MM/yyyy") };
                 var lvi = new ListViewItem(row);
 
                 lvi.Tag = person;

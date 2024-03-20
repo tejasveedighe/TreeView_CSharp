@@ -37,10 +37,11 @@
             // listView1
             // 
             listView1.Columns.AddRange(new ColumnHeader[] { fistName, lastName, DOB });
+            listView1.Dock = DockStyle.Fill;
             listView1.GridLines = true;
-            listView1.Location = new Point(12, 37);
+            listView1.Location = new Point(0, 0);
             listView1.Name = "listView1";
-            listView1.Size = new Size(550, 382);
+            listView1.Size = new Size(621, 438);
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -65,7 +66,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 553);
+            ClientSize = new Size(621, 438);
             Controls.Add(listView1);
             Name = "List_View";
             Text = "List View";

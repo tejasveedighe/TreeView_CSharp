@@ -42,6 +42,9 @@
             RemoveNodeBtn = new Button();
             label3 = new Label();
             label4 = new Label();
+            label5 = new Label();
+            EditSelectedNodeTxtBox = new TextBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
@@ -49,12 +52,13 @@
             // 
             treeView1.Location = new Point(12, 83);
             treeView1.Name = "treeView1";
-            treeView1.Size = new Size(192, 169);
+            treeView1.Size = new Size(192, 287);
             treeView1.TabIndex = 0;
+            treeView1.AfterSelect += treeView1_AfterSelect;
             // 
             // NodeTxtBox
             // 
-            NodeTxtBox.Location = new Point(269, 101);
+            NodeTxtBox.Location = new Point(256, 83);
             NodeTxtBox.Name = "NodeTxtBox";
             NodeTxtBox.Size = new Size(185, 23);
             NodeTxtBox.TabIndex = 1;
@@ -63,7 +67,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(269, 83);
+            label1.Location = new Point(256, 65);
             label1.Name = "label1";
             label1.Size = new Size(67, 15);
             label1.TabIndex = 2;
@@ -71,7 +75,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(269, 130);
+            button1.Location = new Point(256, 112);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 3;
@@ -91,7 +95,7 @@
             // 
             // ChildNodeTxtBox
             // 
-            ChildNodeTxtBox.Location = new Point(269, 205);
+            ChildNodeTxtBox.Location = new Point(256, 167);
             ChildNodeTxtBox.Name = "ChildNodeTxtBox";
             ChildNodeTxtBox.Size = new Size(185, 23);
             ChildNodeTxtBox.TabIndex = 4;
@@ -100,7 +104,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(269, 187);
+            label2.Location = new Point(256, 149);
             label2.Name = "label2";
             label2.Size = new Size(67, 15);
             label2.TabIndex = 5;
@@ -108,7 +112,7 @@
             // 
             // AddChildNodeBtn
             // 
-            AddChildNodeBtn.Location = new Point(269, 234);
+            AddChildNodeBtn.Location = new Point(256, 196);
             AddChildNodeBtn.Name = "AddChildNodeBtn";
             AddChildNodeBtn.Size = new Size(75, 23);
             AddChildNodeBtn.TabIndex = 6;
@@ -118,7 +122,7 @@
             // 
             // RemoveNodeBtn
             // 
-            RemoveNodeBtn.Location = new Point(60, 258);
+            RemoveNodeBtn.Location = new Point(51, 376);
             RemoveNodeBtn.Name = "RemoveNodeBtn";
             RemoveNodeBtn.Size = new Size(106, 23);
             RemoveNodeBtn.TabIndex = 7;
@@ -145,11 +149,41 @@
             label4.TabIndex = 9;
             label4.Text = "Tree View";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(256, 264);
+            label5.Name = "label5";
+            label5.Size = new Size(106, 15);
+            label5.TabIndex = 10;
+            label5.Text = "Edit Selected Node";
+            // 
+            // EditSelectedNodeTxtBox
+            // 
+            EditSelectedNodeTxtBox.Location = new Point(256, 282);
+            EditSelectedNodeTxtBox.Name = "EditSelectedNodeTxtBox";
+            EditSelectedNodeTxtBox.Size = new Size(185, 23);
+            EditSelectedNodeTxtBox.TabIndex = 11;
+            EditSelectedNodeTxtBox.Validating += textBox1_Validation;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(256, 311);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 12;
+            button2.Text = "Edit Node";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(466, 294);
+            ClientSize = new Size(466, 411);
+            Controls.Add(button2);
+            Controls.Add(EditSelectedNodeTxtBox);
+            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(RemoveNodeBtn);
@@ -181,5 +215,8 @@
         private Button RemoveNodeBtn;
         private Label label3;
         private Label label4;
+        private Button button2;
+        private TextBox EditSelectedNodeTxtBox;
+        private Label label5;
     }
 }

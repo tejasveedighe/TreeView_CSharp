@@ -54,5 +54,16 @@ namespace TreeView
         {
             treeView1.SelectedNode.Remove();
         }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            EditSelectedNodeTxtBox.Text = treeView1.SelectedNode.Text;
+            EditSelectedNodeTxtBox.Focus();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            treeView1.SelectedNode.Text = EditSelectedNodeTxtBox.Text;
+        }
     }
 }

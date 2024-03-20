@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             listView1 = new ListView();
-            Id = new ColumnHeader();
             fistName = new ColumnHeader();
             lastName = new ColumnHeader();
             DOB = new ColumnHeader();
@@ -37,7 +36,7 @@
             // 
             // listView1
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { Id, fistName, lastName, DOB });
+            listView1.Columns.AddRange(new ColumnHeader[] { fistName, lastName, DOB });
             listView1.GridLines = true;
             listView1.Location = new Point(12, 37);
             listView1.Name = "listView1";
@@ -45,11 +44,7 @@
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
-            // 
-            // Id
-            // 
-            Id.Text = "ID";
-            Id.Width = 100;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // fistName
             // 
@@ -81,7 +76,6 @@
         #endregion
 
         private ListView listView1;
-        private ColumnHeader Id;
         private ColumnHeader fistName;
         private ColumnHeader lastName;
         private ColumnHeader DOB;

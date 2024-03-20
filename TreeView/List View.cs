@@ -38,11 +38,35 @@ namespace Views
 
             foreach (var person in people)
             {
-                var row = new string[] { person.Id.ToString(), person.FirstName, person.LastName, person.DOB.ToShortDateString() };
+                var row = new string[] { person.FirstName, person.LastName, person.DOB.ToShortDateString() };
                 var lvi = new ListViewItem(row);
 
                 lvi.Tag = person;
                 listView1.Items.Add(lvi);
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                var person = listView1.SelectedItems[0].Tag as Person;
+                foreach (var item in listView1.SelectedItems)
+                {
+                    Console.WriteLine(item);
+                }
+                if (person != null)
+                {
+
+                    var details = string.Format("{0} {1} {2} born on {3}", person.Id, person.FirstName, person.LastName, person.DOB.ToString("dd/MM/yyyy"));
+
+                    MessageBox.Show(details, "Person Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
             }
         }
     }

@@ -45,6 +45,8 @@
             label5 = new Label();
             EditSelectedNodeTxtBox = new TextBox();
             button2 = new Button();
+            ExpandAllBtn = new Button();
+            CollapseAllBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
@@ -152,7 +154,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(256, 264);
+            label5.Location = new Point(256, 239);
             label5.Name = "label5";
             label5.Size = new Size(106, 15);
             label5.TabIndex = 10;
@@ -160,7 +162,7 @@
             // 
             // EditSelectedNodeTxtBox
             // 
-            EditSelectedNodeTxtBox.Location = new Point(256, 282);
+            EditSelectedNodeTxtBox.Location = new Point(256, 257);
             EditSelectedNodeTxtBox.Name = "EditSelectedNodeTxtBox";
             EditSelectedNodeTxtBox.Size = new Size(185, 23);
             EditSelectedNodeTxtBox.TabIndex = 11;
@@ -168,7 +170,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(256, 311);
+            button2.Location = new Point(256, 286);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 12;
@@ -176,11 +178,33 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // ExpandAllBtn
+            // 
+            ExpandAllBtn.Location = new Point(260, 336);
+            ExpandAllBtn.Name = "ExpandAllBtn";
+            ExpandAllBtn.Size = new Size(75, 23);
+            ExpandAllBtn.TabIndex = 13;
+            ExpandAllBtn.Text = "Expand All";
+            ExpandAllBtn.UseVisualStyleBackColor = true;
+            ExpandAllBtn.Click += ExpandAllBtn_Click;
+            // 
+            // CollapseAllBtn
+            // 
+            CollapseAllBtn.Location = new Point(359, 336);
+            CollapseAllBtn.Name = "CollapseAllBtn";
+            CollapseAllBtn.Size = new Size(82, 23);
+            CollapseAllBtn.TabIndex = 14;
+            CollapseAllBtn.Text = "Collapse All";
+            CollapseAllBtn.UseVisualStyleBackColor = true;
+            CollapseAllBtn.Click += CollapseAllBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(466, 411);
+            Controls.Add(CollapseAllBtn);
+            Controls.Add(ExpandAllBtn);
             Controls.Add(button2);
             Controls.Add(EditSelectedNodeTxtBox);
             Controls.Add(label5);
@@ -218,5 +242,7 @@
         private Button button2;
         private TextBox EditSelectedNodeTxtBox;
         private Label label5;
+        private Button CollapseAllBtn;
+        private Button ExpandAllBtn;
     }
 }

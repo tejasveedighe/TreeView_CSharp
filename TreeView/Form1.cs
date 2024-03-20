@@ -66,5 +66,15 @@ namespace TreeView
             treeView1.SelectedNode.Name = EditSelectedNodeTxtBox.Text;
             treeView1.SelectedNode.Text = EditSelectedNodeTxtBox.Text;
         }
+
+        private void ExpandAllBtn_Click(object sender, EventArgs e)
+        {
+            treeView1.ExpandAll();
+        }
+
+        private void CollapseAllBtn_Click(object sender, EventArgs e)
+        {
+            treeView1.CollapseAll();
+        }
     }
 }
